@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.snownaul.spindragon.GameoverActivity"
+    android:background="@drawable/back_01"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/enemy_b_03"
+        android:clickable="true"
+        android:onClick="clickImg"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_gameover"
+        android:layout_width="340dp"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="@drawable/ui_gameover_back"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/iv"
+        android:weightSum="3"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ui_gameover_label_champion"/>
+            <TextView
+                android:id="@+id/tv_champion"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="0000000"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#2dc6de"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ui_gameover_label_yourscore"/>
+            <TextView
+                android:id="@+id/tv_yourscore"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="0000000"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#ec9137"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:src="@drawable/btn_select_gameretry"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_alignLeft="@id/layout_gameover"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:onClick="clickRetry"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="49dp"
+        android:src="@drawable/btn_select_gameexit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@id/layout_gameover"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="8dp"
+        android:clickable="true"
+        android:onClick="clickExit"/>
+
+
+
+
+
+</RelativeLayout>
